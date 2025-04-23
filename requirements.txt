@@ -1,0 +1,7 @@
+pubmed-parser
+sentence-transformers
+vertexai
+google-cloud-aiplatform
+chromadb
+pydantic
+uvicorn

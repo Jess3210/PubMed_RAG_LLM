@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  fastapi:
+    build: .
+    ports:
+      - "7000:7000"  # port of running FastAPI
+    depends_on:
+      - chromadb
+    environment:
+      - CHROMADB_HOST=chromadb  # Name of ChromaDB-service in docker compose
+      - CHROMADB_PORT=8000
+
+  chromadb:
+    image: ghcr.io/chroma-core/chroma:latest  # ChromaDB Image from GitHub
+    ports:
+      - "8000:8000"  # chromaDB port
+    # volumes:
+    #   - chroma_data:/app/chroma_data  # Persistent data
+
+volumes:
+  chroma_data:
+    driver: local
