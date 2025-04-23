@@ -5,6 +5,7 @@ Retrieval Augmented Generation (RAG) for Document Retrieval and Question Answeri
 ![Architektur System](architecture_pubmed_rag.png)
 
 ## Project Structure
+```
 .
 ├── README.md
 ├── Dockerfile
@@ -18,7 +19,7 @@ Retrieval Augmented Generation (RAG) for Document Retrieval and Question Answeri
         └── ExtractPubMedDataClass.py
         └── SimilarityMetricClass.py
     └── main.py
-
+```
 ## Prerequisites
 * Google Cloud Vertex AI Credentials
 * GCP Project
@@ -33,27 +34,32 @@ Retrieval Augmented Generation (RAG) for Document Retrieval and Question Answeri
 ![Start Insert](start_insert.JPG)
 
 * Use for example Postman API for:
-
-**Insert**
-POST: http://localhost:7000/ingest/
+  
+**Insert** <br>
+POST: http://localhost:7000/ingest/ <br>
 Body: JSON
+```
 {
     "document": "https://pubmed.ncbi.nlm.nih.gov/15858239/"
 }
-
+```
 Return: "OK"
 
-**Question**
-POST: http://localhost:7000/query/
+**Question** <br>
+POST: http://localhost:7000/query/ <br>
 Body: JSON
+```
 {
     "query": "What are the various genes?"
 }
-
+```
 Return:
+```
 {
     "question:": "What are the various genes?",
     "answer": "The genes involved in Hirschsprung disease are RET, EDNRB, GDNF, EDN3, SOX10, NTN3, and ECE1.\n",
     "url": "https://pubmed.ncbi.nlm.nih.gov/15858239/"
 }
-
+```
+## Author <br>
+Jessica Kick
