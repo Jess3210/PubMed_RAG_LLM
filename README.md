@@ -2,7 +2,7 @@
 Retrieval Augmented Generation (RAG) for Document Retrieval and Question Answering of PubMed papers. Takes as input a PubMed Url and inserts it into the vector DB ChromaDB. It also takes a question as query input, retrieves context and generates the answer via Gemini with the url of the paper. 
 
 ## Architecture
-![Architektur System](architecture_pubmed_rag.png)
+![Architektur System](architecture_pubmed_rag_llm.png)
 
 ## Project Structure
 .
